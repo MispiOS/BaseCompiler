@@ -3,6 +3,7 @@ package fr.mispios.basecompiler.console;
 /**
  * Use this class as a quick <code>System.out</code> with some colors
  */
+@SuppressWarnings("unused")
 public class Console {
     public static void print(String toPrint) {
         System.out.print(toPrint);
