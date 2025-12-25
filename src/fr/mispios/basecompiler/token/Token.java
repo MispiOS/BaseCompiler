@@ -3,7 +3,7 @@ package fr.mispios.basecompiler.token;
 /**
  * This class represents Tokens. A Token is identified by the file it comes from, the line and the column number it has been created, its TokenType, and its content
  */
-public class Token {
+public class Token implements IToken {
     private final String file;
     private final int line;
     private final int column;
