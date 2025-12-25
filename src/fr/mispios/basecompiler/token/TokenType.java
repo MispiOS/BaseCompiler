@@ -6,9 +6,16 @@ import java.util.List;
 /**
  * This class represents all the types Tokens can have identified by there symbols
  */
+@SuppressWarnings("unused")
 public enum TokenType {
     NONE,
-    EQUALS('=');
+    EQUALS('='),
+    QUOTE('"'),
+    CHAR_QUOTE('\''),
+    OPERATOR('+', '-', '/', '*', '%'),
+    BRACKET('[', ']'),
+    BRACE('{', '}'),
+    PARENTHESIS('(', ')');
 
     private final List<Character> symbol;
     TokenType(char... symbols) {
@@ -16,10 +23,6 @@ public enum TokenType {
         for(char s : symbols) {
             symbol.add(s);
         }
-    }
-
-    TokenType() {
-        this(' ');
     }
 
     public List<Character> getSymbols() { return symbol; }
