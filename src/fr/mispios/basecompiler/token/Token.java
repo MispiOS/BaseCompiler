@@ -36,6 +36,6 @@ public class Token implements IToken {
 
     @Override
     public String toString() {
-        return getValue() + " in " + getFile() + " at " + getLine() + ":" + getColumn();
+        return getType() + " " + getValue() + " in " + getFile() + " at " + getLine() + ":" + getColumn();
     }
 }
