@@ -4,7 +4,7 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Tokenizer implements ITokenizer {
+public class Tokenizer {
     public static List<IToken> tokenize(String fileName) throws FileNotFoundException {
         File file = new File(fileName);
 
