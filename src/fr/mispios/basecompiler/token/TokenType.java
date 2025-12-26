@@ -12,6 +12,8 @@ public enum TokenType {
     OTHER,
     KEYWORD,
     TYPE,
+    STRING,
+    CHAR,
     EQUALS('='),
     QUOTE('"'),
     CHAR_QUOTE('\''),
