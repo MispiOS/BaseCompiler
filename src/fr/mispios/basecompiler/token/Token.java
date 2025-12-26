@@ -18,6 +18,16 @@ public class Token implements IToken {
         this.value = value;
     }
 
+    public Token(String file, int line, int column, String value) {
+        this(
+                file,
+                line,
+                column,
+                value.length() == 1 ? TokenType.fromSymbol(value.charAt(0)) : TokenType.fromWord(value),
+                value
+        );
+    }
+
     public String getFile() { return file; }
     public int getLine() { return line; }
     public int getColumn() { return column; }
